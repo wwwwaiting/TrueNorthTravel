@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>True North Travel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+
+    <script>
+      var service;
+      var V;
+      function initMap() {
+
+    // initilize a location of vancouver to use goole map api; 
+    // note that the location is irrelevant to the result for google text search
+        V = new google.maps.LatLng(49.25,-123.133333);
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: V,
+          zoom: 15
+        });
+
+        service = new google.maps.places.PlacesService(map);
+      }
+
+
+    </script>
+    
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxrP-Z_Bze_qa9uvAxDu0el5gRSnH71Kw&libraries=places&callback=initMap" async defer></script>
+
+    </div>
+
+  </head>
+
+  <body id="page-top">
+
+  <!--This div is the front entry view  
+  <div id="needtorm" class="myVideo">
+    Below is the video in the enty page
+    <video autoplay loop muted id="video">
+      <source src="bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p id="final">CLICK TO ENTER</p>
+  </div>-->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">True North Travel</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#bgVideo">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Suggestion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/login">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--This nav bar is for search result, the color is different-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top notdisplay" id="mainNav2">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" onclick="backkk()">True North Travel</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#bgVideo" onclick="backkk()">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services" onclick="backkk()">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio" onclick="backkk()">Suggestion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/login">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex" id="header">
+      <video autoplay muted id="bgVideo">
+      <source src="bg2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Your Favorite Source of Free Travel Advisor</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">True North Travel can help you plan your own trip in any place in Canada! We don't provide travel deals, but give suggestions for various places in any province!</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">find out more</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">About</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Scientific Ranking</h3>
+              <p class="text-muted mb-0">Our website uses rate and comments to rank each places.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Ready to Go</h3>
+              <p class="text-muted mb-0">You can use this website to plan your trip at any time you want!</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Up to Date</h3>
+              <p class="text-muted mb-0">We update database to keep things fresh.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Made with Love</h3>
+              <p class="text-muted mb-0">You have to make your travel with love these days!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-primary" id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">We've got what you need!</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">True North Travel has everything you need to plan your own trip in Canada! You simply need to choose a Province and one type of activity, then you are ready to go! Don't forget to type full province name! Province code is not valid.</p>
+            <input class="btn btn-light btn-xl js-scroll-trigger place" type="text" name="Province & Territories" placeholder="Province & Territories" id="place">
+            <input class="btn btn-light btn-xl js-scroll-trigger type" type="text" name="Acticity" placeholder="Acticity" id="activity">
+            <button class="btn btn-light btn-xl js-scroll-trigger" id="submit-search">Search</button>
+            <p id="error-msg"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-0" id="portfolio">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters popup-gallery">
+          <div class="col-lg-4 col-sm-6" id="skiing">
+            <a class="portfolio-box" href="#">
+              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-name">
+                    SKIING
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6" id="beach">
+            <a class="portfolio-box" href="#">
+              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-name">
+                    BEACH
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6" id="museum">
+            <a class="portfolio-box" href="#">
+              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-name">
+                    MUSEUM
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6" id="ice-skating">
+            <a class="portfolio-box" href="#">
+              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-name">
+                    ICE-SKATING
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6" id="amusement_park">
+            <a class="portfolio-box" href="#">
+              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-name">
+                    AMUSEMENT PARK
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6" id="national_park">
+            <a class="portfolio-box" href="#">
+              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-name">
+                    NATIONAL PARK
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- popup layer -->
+    
+      <div id="mypopup" class="white-popup mfp-hide">
+          
+      </div>
+
+    <!-- Page Content -->
+    <div class="container notdisplay" id="main">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">Results:
+        <small></small>
+      </h1>
+
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item notdisplay" id="0">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" id="image0" src="img/portfolio/fullsize/7.jpg" alt="" ></a>
+            <div class="card-body"  id="card0">
+              <h4 class="card-title" id="title0">
+                <a href="#" id="text0">Project One</a>
+              </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item notdisplay" id="1">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" id="image1" src="img/portfolio/fullsize/7.jpg" alt=""></a>
+            <div class="card-body" id="card1">
+              <h4 class="card-title" id="title1">
+                <a href="#" id="text1">Project Two</a>
+              </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item notdisplay" id="2">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" id="image2" src="img/portfolio/fullsize/7.jpg" alt=""></a>
+            <div class="card-body" id="card2">
+              <h4 class="card-title" id="title2">
+                <a href="#" id="text2">Project Three</a>
+              </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item notdisplay" id="3">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" id="image3" src="img/portfolio/fullsize/7.jpg" alt=""></a>
+            <div class="card-body" id="card3">
+              <h4 class="card-title" id="title3">
+                <a href="#" id="text3">Project Four</a>
+              </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item notdisplay" id="4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top"  id="image4" src="img/portfolio/fullsize/7.jpg" alt=""></a>
+            <div class="card-body" id="card4">
+              <h4 class="card-title" id="title4">
+                <a href="#" id="text4">Project Five</a>
+              </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item notdisplay" id="5">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" id="image5" src="img/portfolio/fullsize/7.jpg" alt=""></a>
+            <div class="card-body" id="card5">
+              <h4 class="card-title" id="title5">
+                <a href="#" id="text5">Project Six</a>
+              </h4>
+              <p class="card-text">.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item notdisplay" id="6">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top"  id="image6" src="img/portfolio/fullsize/7.jpg" alt=""></a>
+            <div class="card-body" id="card6">
+              <h4 class="card-title" id="title6">
+                <a href="#" id="text6">Project Seven</a>
+              </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item notdisplay" id="7">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" id="image7" src="img/portfolio/fullsize/7.jpg" alt=""></a>
+            <div class="card-body" id="card7">
+              <h4 class="card-title" id="title7">
+                <a href="#" id="text7">Project Eight</a>
+              </h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item notdisplay" id="8">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" id="image8" src="img/portfolio/fullsize/7.jpg" alt=""></a>
+            <div class="card-body" id="card8">
+              <h4 class="card-title" id="title8">
+                <a href="#" id="text8">Project Nine</a>
+              </h4>
+              <p class="card-text" id="hehe"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- /.row -->
+
+    <footer class="py-5 bg-dark" id="footer">
+      <div class="bottom_footer">
+        <p class="m-0 text-center text-white">Luya Wang, Fanxuan Guo and Zeping Qu &copy; True North Travel 2018</p >
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+<!--     <script src="js/creative.js"></script> -->
+  </body>
+
+</html>
+
+<script type="text/javascript">
+  (function($) {
+  "use strict"; // Start of use strict
+
+  // Smooth scrolling using jQuery easing
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: (target.offset().top - 57)
+        }, 1000, "easeInOutExpo");
+        return false;
+      }
+    }
+  });
+
+  // Closes responsive menu when a scroll trigger link is clicked
+  $('.js-scroll-trigger').click(function() {
+    $('.navbar-collapse').collapse('hide');
+  });
+
+  // Activate scrollspy to add active class to navbar items on scroll
+  $('body').scrollspy({
+    target: '#mainNav',
+    offset: 57
+  });
+
+  // Collapse Navbar
+  var navbarCollapse = function() {
+    if ($("#mainNav").offset().top > 100) {
+      $("#mainNav").addClass("navbar-shrink");
+    } else {
+      $("#mainNav").removeClass("navbar-shrink");
+    }
+  };
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
+
+  // Scroll reveal calls
+  window.sr = ScrollReveal();
+  sr.reveal('.sr-icons', {
+    duration: 600,
+    scale: 0.3,
+    distance: '0px'
+  }, 200);
+  sr.reveal('.sr-button', {
+    duration: 1000,
+    delay: 200
+  });
+  sr.reveal('.sr-contact', {
+    duration: 600,
+    scale: 0.3,
+    distance: '0px'
+  }, 300);
+
+  // // Magnific popup calls
+  // $('.popup-gallery').magnificPopup({
+  //   delegate: 'a',
+  //   type: 'image',
+  //   tLoading: 'Loading image #%curr%...',
+  //   mainClass: 'mfp-img-mobile',
+  //   gallery: {
+  //     enabled: true,
+  //     navigateByImgClick: true,
+  //     preload: [0, 1]
+  //   },
+  //   image: {
+  //     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+  //   }
+  // });
+
+})(jQuery); // End of use strict
+
+
+
+
+
+
+
+
+
+
+  
+  // if (document.getElementById('bgVideo') != null){
+  //   document.getElementById('bgVideo').addEventListener('loadedmetadata', function() {
+  //     this.currentTime = 8;
+  //   }, false);
+  // }
+
+  if (performance.navigation.type == 1) {
+    document.getElementById('bgVideo').addEventListener('loadedmetadata', function() {
+      //this.currentTime = 8;
+      location.href = location.href
+      //window.scrollTo(0,0);  
+    }, false);
+  } 
+
+  // below is the code for nav bar, go back to main view
+  function backkk(){
+    document.getElementById("main").classList.add("notdisplay");
+    document.getElementById("mainNav2").classList.add("notdisplay");
+    document.getElementById("header").classList.remove("notdisplay");
+    document.getElementById("about").classList.remove("notdisplay");
+    document.getElementById("services").classList.remove("notdisplay");
+    document.getElementById("portfolio").classList.remove("notdisplay");
+    document.getElementById("footer").style.position = "relative";
+
+
+  }
+
+
+
+  //Below is the code for Submit Need to check the following:
+  var map;
+  var wanted_type = ['art_gallary', 'amusement_park', 'night_club', 'cafe', 'museum', 'park', 'zoo', 'natural_feature', 
+                     'aquarium', 'campground', 'point_of_interest', 'establishment'];
+
+  var province = ['ontario', 'british columbia', 'newfoundland', 'prince edward island', 'nova scotia', 'new brunswick',
+                  'quebec', 'manitoba', 'saskatchewan', 'alberta', 'yukon', 'nunavut', 'northwest territories'];
+
+  /* below is the code to check valid input for search
+   * need to check if there is an input for activity
+   * need to check if the input province or territoty is valid
+   * need to fill in ontario as default
+
+   */
+  function checkValid(){
+    var place = document.getElementsByClassName("place")[0].value.toLowerCase().trim();
+    var type = document.getElementsByClassName("type")[0].value.toLowerCase().trim();
+    var error = document.getElementById("error-msg"); 
+    var pflag = false;         // place flag 
+    var tflag = false;         // type flag
+
+    if (place.length == 0){
+      pflag = true;
+      place = "ontario";
+    } else if (province.indexOf(place) == -1){
+      error.innerHTML = "Error: Please fill in the full name of province or territory. e.g. ontario";
+      document.getElementsByClassName("place")[0].value = "";
+    } else {
+      pflag = true;
+      error.innerHTML = "";
+    }
+
+    if (pflag == true) {
+      if (type.length == 0){
+        error.innerHTML = "Error: Please fill in one type of activity. e.g. hikings";
+        document.getElementsByClassName("type")[0].value = "";
+      } else {
+        tflag = true;
+        error.innerHTML = "";
+      }
+    }
+
+    if (pflag && tflag){
+      var str = type.concat(" near ");
+      document.getElementsByClassName("place")[0].value = "";
+      document.getElementsByClassName("type")[0].value = "";
+      return str.concat(place);
+    } else {
+      return null;
+    }
+  }
+
+  // enter key to activate search button
+  $("#place").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#submit-search").click();
+    }
+  }); 
+
+  $("#activity").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#submit-search").click();
+    }
+  });
+  
+
+    // add click event with text search for search bar 
+    // check if the query is null first
+
+    $('#submit-search').on('click', function(){
+      var search = checkValid();
+      if (search == null){
+        return;
+      }
+      service.textSearch({
+        location:V,
+        query: search
+        }, callback
+      );
+    });
+
+    //add click event with text search for six suggestions with default values
+    document.getElementById('skiing').addEventListener('click', function() {
+      service.textSearch({
+        location:V,
+        query: "skiing near vancourver"
+        }, callback
+      );
+    });
+    document.getElementById('ice-skating').addEventListener('click', function() {
+      service.textSearch({
+        location:V,
+        query: 'ice-skating near vancourver'
+        }, callback
+      );
+    });
+    document.getElementById('amusement_park').addEventListener('click', function() {
+      service.textSearch({
+        location:V,
+        query: "amusement park near vancourver"
+        }, callback
+      );
+    });
+    document.getElementById('museum').addEventListener('click', function() {
+      service.textSearch({
+        location:V,
+        query: "museum near vancourver"
+        }, callback
+      );
+    });
+    document.getElementById('beach').addEventListener('click', function() {
+      service.textSearch({
+        location:V,
+        query: "beach near vancourver",
+        type:['beach']
+        }, callback
+      );
+    });
+    document.getElementById('national_park').addEventListener('click', function() {
+      service.textSearch({
+        location:V,
+        query: "national park near alberta"
+        }, callback
+      );
+    });
+
+  function callback(results, status) {
+
+    // display the contents for result page
+    // make the contents for search and suggestion page invisible
+    document.getElementById("error-msg").innerHTML = "";
+    document.getElementById("page-top").classList.remove("mfp-zoom-out-cur");
+    document.getElementById("main").classList.remove("notdisplay");
+    document.getElementById("mainNav2").classList.remove("notdisplay");
+    document.getElementById("header").classList.add("notdisplay");
+    document.getElementById("about").classList.add("notdisplay");
+    document.getElementById("services").classList.add("notdisplay");
+    document.getElementById("portfolio").classList.add("notdisplay");
+    window.scrollTo(0,0);
+
+    // clear up the nine boxes
+    for (var i = 0; i < 9; i++) {
+      var show_content = document.getElementById(i.toString());
+      var value = show_content.classList.contains("notdisplay")
+      if (!show_content.classList.contains("notdisplay")){
+        show_content.classList.add("notdisplay");
+      };
+      
+    }
+    // if the result is ok, display the results.
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
+
+      // arrange the results with decresing order in rating
+      for(var i=0; i < results.length ;i++){
+        if(results[i].rating==null || results[i].rating==undefined  || results[i].rating==""){
+          results[i].rating="0";
+        }
+      }
+      var i, j, temp;
+      for (i = 0; i < results.length - 1; i++)
+      for (j = 0; j < results.length - 1 - i; j++)
+      if (results[j].rating > results[j + 1].rating) {
+        temp = results[j];
+        results[j] = results[j + 1];
+        results[j + 1] = temp;
+      }
+      results.reverse();
+
+      // check if the type of elements in results is what we want
+      var cur =0;
+      var flag = false;
+      while (cur < results.length){
+        var type_list = results[cur].types;
+        for (var j = 0; j< type_list.length; j++){
+          if(wanted_type.indexOf(type_list[j]) == -1){
+            flag = true;
+            break;
+          }
+        }
+        if(flag == true){
+          results.splice(cur, 1);
+        }else{
+          cur += 1;
+        }
+        flag = false;
+      } 
+
+      // fix the location of the footer and the content of the heading in result page
+      if (results.length == 0){
+          document.getElementsByTagName("small")[0].innerText = "Not Found";
+      }else{
+        document.getElementsByTagName("small")[0].innerText = "";
+      }
+      if(results.length > 3){
+        document.getElementById("footer").style.position = "relative";
+      }else{
+        document.getElementById("footer").style.position = "absolute";
+      }
+
+      // display the result in correspionding position
+      var flag = 0;
+      var i = 0;
+      while (flag < 9){
+        if(i == results.length){
+          break;
+        }
+        var show_content = document.getElementById(flag.toString());
+        if ((results[i].name != "Bard on the Beach Shakespeare Festival") && (results[i].formatted_address.indexOf("Canada") > -1)){
+          show_content.classList.remove("notdisplay");
+          var title = document.getElementById("text".concat(flag.toString()));
+          title.innerText = results[i].name;
+          if (results[i].photos != undefined){
+            var photo = (results[i].photos)[0];
+            var img = document.getElementById("image".concat(flag.toString()));
+            var img_ref = photo.getUrl({maxWidth: 700, maxHeight: 400});
+            img_ref.concat("&key=AIzaSyDs2n4UdCbbWnayBr7OhqQI4DiFP5UvnLY");
+            img.src = img_ref;
+            results[i].img = img_ref;
+            flag += 1;
+          }
+        }
+        make_popups(show_content, results[i]);
+        i+=1;
+      }
+
+    }else{ //if the request is not success, show not found on the result page
+      document.getElementById("footer").style.position = "absolute";
+      document.getElementsByTagName("small")[0].innerText = "Not Found";
+    }
+  }
+
+    function make_popups(n,i){
+        $(n).magnificPopup({
+            items:[{src:make_popup(i),type:"inline"}],closeBtnInside:!0,callbacks:{
+                open:function(){
+                    var n=$('<span class="dialog__close">&#x2715;</span>').on("click",function(n){
+                        return $(".white-popup .mfp-close").click()});
+                    $(".white-popup .mfp-close").after(n).hide()
+                }
+            }
+        })
+    }
+
+
+    // gernerate the stars in rating
+    function make_ratings(n){
+        for(var i=[];n>=1;)
+            i.push("<i class='fa fa-star'></i>"),--n;
+        for(n>=.75?i.push("<i class='fa fa-star'></i>"):n>=.5&&i.push("<i class='fa fa-star-half-o'></i>");i.length<5;)
+            i.push("<i class='fa fa-star-o'></i>");
+        return i.join("")
+    }
+
+    //making the popup window dynamically
+    function make_popup(n){
+        return '\n' + 
+          '<div class="dialog popup-position white-popup">\n' + 
+          '<div class="row dialog__title"> \n \n <p id="title">'+ n.name + 
+          '</p> \n \n </div>\n <div class="row" style="height: 15px;">&nbsp;</div>\n' + 
+          '<div class="row dialog__content">\n <div class="col-lg-6 col-sm-6 image">\n' + 
+          '<img src="' + (n.img||"img/portfolio/fullsize/7.jpg") + 
+          '">\n</img>\n </div>\n <div class="col-lg-6 col-sm-6">\n' + 
+          '<div id="rate"> Ratings: ' + 
+          make_ratings(n.rating) + "(" + n.rating +'/5)</div>\n' + 
+          '<div data-address id="address"><i class="fa fa-map-marker"></i>' + 
+          n.formatted_address + "</div>\n <div data-link><a href='https://www.google.ca/maps/place/" + 
+          n.name.split(" ").join("+") + '\'><i class=\'fa fa-link\'></i>Link</a> </div>'+ 
+          '</div>\n </div>\n <div class="row" style="height: 15px;">&nbsp;</div>\n \n' + 
+          '<div class="row comments">\n <div class="col-lg-12 col-sm-12">\n' + 
+          '<div class="comment-form">\n \x3c!-- Comment Avatar --\x3e\n' + 
+          '<div class="comment-avatar">\n' + '<img src="img/portfolio/fullsize/8.jpg">\n' + 
+          '</div>\n \n <div class="form" name="form" novalidate>\n' + 
+          '<div class="form-row">\n <textarea\n class="input"\n' + 
+          'id="comment_text"\n placeholder="Want to leave a comment?"\n' + 
+          'required></textarea>\n </div>\n <div class="form-row">' + 
+          '\n <button id="comment_submit">Add Comment</button>\n' + 
+          '</div>\n </div>\n </div>\n \n </div>\n </div>\n \n \n' + 
+          '<div class="row">\n <div class=\'comments col-lg-12 col-sm-12\'' + 
+          'id=\'comment_list\'>\n\n </div>\n' + '</div>\n </div>\n\n \n </div>\n \n </div>\n'
+  }
+
+  $(document).on(
+    "click","#comment_submit", function(){
+      if ($("#comment_text").val() == ''){
+        $('#comment_text').attr('placeholder', 'Oops, empty comment!');
+      } else {
+        var n=$("#comment_text").val();
+        $("#comment_text").val("");
+        create_comment(n);
+        var name = $('#title').text();
+        var address = $('#address').text();
+        $.ajax({
+          type: "POST",
+          url: "/comment",
+          data: {name, address, n},
+          success: function(data){}
+        });
+      }
+  });
+
+  function create_comment(n){
+    var a=$("<div></div>").text(n).html();
+    //var s=$("#comment_email").val()||"Anonymous";
+    var t='<div class="comment">\n' + 
+          '\x3c!-- Comment Avatar --\x3e\n' + 
+          '<div class="comment-avatar">\n' + 
+          '<img src="img/portfolio/fullsize/8.jpg">\n' + 
+          '</div>\n\n \x3c!-- Comment Box --\x3e\n' + 
+          '<div class="comment-box">\n' + 
+          '<div class="comment-text">' + a + 
+          '</div>\n </div>';
+    $("#comment_list").prepend(t);
+  }
+
+
+  $( "body" ).click(function( event ) {
+    var flag = event.target.id.toString().includes('text') || event.target.id.toString().includes('card') || event.target.id.toString().includes('image') || event.target.id.toString().includes('title') ;
+    if (flag){
+      var index = event.target.id.toString().substring(event.target.id.toString().length-1,event.target.id.toString().length);
+      var path = '#text' + index;
+      var name = $(path).text();
+      $.ajax({
+        type: "POST",
+        url: "/check",
+        data: {name},
+        success: function(comments){
+          if (comments != 'null'){
+            for (i = 0; i < comments.length; i++){
+              create_comment(comments[i]);
+            }
+          } 
+      }});
+    } 
+  });
+
+  // $(document).on(
+  //   "click","#comment_anonymous", function(){
+  //     var n=$("#comment_email");
+  //     n.toggleClass("disabled").attr("disabled")?n.attr("disabled",null):n.attr("disabled","disabled").val("")
+  // });
+</script>

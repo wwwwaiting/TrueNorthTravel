@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>True North Travel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/favourite.min.css" rel="stylesheet">
+    <link href="css/dialog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">True North Travel</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/main2#bgVideo">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/main2#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/main2#services">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/main2#portfolio">Suggestion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/favourite">Hi, <%=username %></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/main">Log Out</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/about-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Hello, <%=username %></h1>
+              <button class="btn btn-light btn-xl js-scroll-trigger Change" id="change-passward">Change Passward</button>
+              <input class="btn btn-light btn-xl js-scroll-trigger pass notdisplay" type="password" id="passward">
+              <button class="btn btn-light btn-xl js-scroll-trigger submit notdisplay" id="submit-passward">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto" id="content">
+          <!-- Pager -->
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark" id="footer">
+      <div class="bottom_footer">
+        <p class="m-0 text-center text-white">Luya Wang, Fanxuan Guo and Zeping Qu &copy; True North Travel 2018</p >
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+  </body>
+
+</html>
+
+    <script type="text/javascript">
+      (function($) {
+        "use strict"; // Start of use strict
+
+        // Floating label headings for the contact form
+        $("body").on("input propertychange", ".floating-label-form-group", function(e) {
+          $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
+        }).on("focus", ".floating-label-form-group", function() {
+          $(this).addClass("floating-label-form-group-with-focus");
+        }).on("blur", ".floating-label-form-group", function() {
+          $(this).removeClass("floating-label-form-group-with-focus");
+        });
+
+        // Show the navbar when the page is scrolled up
+        var MQL = 992;
+
+        //primary navigation slide-in effect
+        if ($(window).width() > MQL) {
+          var headerHeight = $('#mainNav').height();
+          $(window).on('scroll', {
+              previousTop: 0
+            },
+            function() {
+              var currentTop = $(window).scrollTop();
+              //check if user is scrolling up
+              if (currentTop < this.previousTop) {
+                //if scrolling up...
+                if (currentTop > 0 && $('#mainNav').hasClass('is-fixed')) {
+                  $('#mainNav').addClass('is-visible');
+                } else {
+                  $('#mainNav').removeClass('is-visible is-fixed');
+                }
+              } else if (currentTop > this.previousTop) {
+                //if scrolling down...
+                $('#mainNav').removeClass('is-visible');
+                if (currentTop > headerHeight && !$('#mainNav').hasClass('is-fixed')) $('#mainNav').addClass('is-fixed');
+              }
+              this.previousTop = currentTop;
+            });
+        }
+        var navbarCollapse = function() {
+          if ($("#mainNav").offset().top > 100) {
+            $("#mainNav").addClass("navbar-shrink");
+          } else {
+            $("#mainNav").removeClass("navbar-shrink");
+          }
+        };
+        // Collapse now if page is not at top
+        navbarCollapse();
+        $(window).scroll(navbarCollapse);
+        })(jQuery); 
+
+        $( document ).ready(function() {
+          $.ajax({
+            type: "GET",
+            url: "/favourite/list",
+            success: function(data)
+            {
+              if(data.data.length != 0){
+                for(var i = 0; i< data.data.length; i++){
+                  create(i, data.data.length, data.data[i])
+                }
+
+              }else{
+                $('#content').css('font-size', '26px');
+                document.getElementById("content").innerHTML = 'You do not have any favourite place in you favourite list yet.';
+              }
+            }
+          });
+        });
+
+      $('#change-passward').on('click', function(){
+        document.getElementById("passward").classList.remove("notdisplay");
+        document.getElementById("submit-passward").classList.remove("notdisplay");
+        $('#change-passward').css('display', 'none');
+
+      });        
+      $('#submit-passward').on('click', function(){          
+        document.getElementById("passward").classList.add("notdisplay");
+        document.getElementById("submit-passward").classList.add("notdisplay");
+        $('#change-passward').css('display', '');
+        if (document.getElementsByClassName("pass")[0].value.toLowerCase().trim().length != 0){
+          var pwd = document.getElementsByClassName("pass")[0].value.toLowerCase().trim();
+          document.getElementsByClassName("pass")[0].value = "";
+          // update passward to the server
+          var sent = {pwd};
+          $.ajax({
+            type: "PUT",
+            url: "/favourite",
+            data: sent,
+           success: function(data){
+              if (data == 'true'){
+                swal("", "You have successfully changed your passward.", "success");
+                //alert('You have successfully changed your passward.');
+              } 
+            }
+          });
+        }
+      });       
+
+      $("#passward").keyup(function(event) {
+        if (event.keyCode === 13) {
+          $("#submit-passward").click();
+        }
+      });
+
+
+        
+      var iDiv;
+      var link;
+      var sub;
+      var del;
+      var line;
+      function create(index, data_length, fav){  
+
+        iDiv = document.createElement('div');
+        iDiv.id = 'block'.concat(index.toString());
+        iDiv.className = 'post-preview';
+        document.getElementById("content").appendChild(iDiv);
+
+        link = document.createElement('a');
+        link.href = '';
+        link.id = 'link'.concat(index.toString());
+        iDiv.appendChild(link);
+
+
+        sub = document.createElement('h2');
+        sub.className = 'post-title';
+        sub.id = 'title'.concat(index.toString());
+        link.appendChild(sub);
+        document.getElementById('title'.concat(index.toString())).innerHTML = fav.name;
+
+        sub = document.createElement('h3');
+        sub.className = 'post-subtitle';
+        sub.id = 'subtitle'.concat(index.toString());
+        iDiv.appendChild(sub);
+        document.getElementById('subtitle'.concat(index.toString())).innerHTML = fav.address;
+
+        del = document.createElement('button');
+        del.className = 'btn btn-light btn-xl1 js-scroll-trigger Chang';
+        del.id = 'delete'.concat(index.toString());
+        iDiv.appendChild(del);
+        document.getElementById('delete'.concat(index.toString())).innerHTML = "delete";
+        
+        line = document.createElement('hr');
+        iDiv.appendChild(line);
+
+        var address = fav.address;
+
+        var del_id = '#'.concat(del.id);
+        var block_id = iDiv.id;
+        $(del_id).on('click', function(){
+          document.getElementById(block_id).remove();
+          var length = $("#content").children().length;
+          if (length == 0){
+            $('#content').css('font-size', '26px');
+            document.getElementById("content").innerHTML = 'You do not have any favourite place in you favourite list yet.';
+
+          }
+
+          var sent = {address};
+          $.ajax({
+            type: "DELETE",
+            url: "/favourite",
+            data: sent,
+            success: function(data){
+              // if (data == 'true'){
+              //   swal("", "You can view your favourite list in your account page.", "success");
+              //   //alert('You have successfully deleted the place from your favourite list.');
+              // }
+            }
+          });
+        });
+
+        make_popups(document.getElementById('title'.concat(index.toString())), fav);
+      }
+
+      function make_popups(n,i){
+        $(n).magnificPopup({
+            items:[{src:make_popup(i),type:"inline"}],closeBtnInside:!0,callbacks:{
+                open:function(){
+                    var n=$('<span class="dialog__close">&#x2715;</span>').on("click",function(n){
+                        return $(".white-popup .mfp-close").click()});
+                    $(".white-popup .mfp-close").after(n).hide()
+                }
+            }
+        })
+      }
+
+      // gernerate the stars in rating
+      function make_ratings(n){
+          for(var i=[];n>=1;)
+              i.push("<i class='fa fa-star'></i>"),--n;
+          for(n>=.75?i.push("<i class='fa fa-star'></i>"):n>=.5&&i.push("<i class='fa fa-star-half-o'></i>");i.length<5;)
+              i.push("<i class='fa fa-star-o'></i>");
+          return i.join("")
+      }
+
+      //making the popup window dynamically
+      function make_popup(n){
+          return '\n' + 
+            '<div class="dialog popup-position white-popup">\n' + 
+            '<div class="row dialog__title"> \n \n <p id="title">'+ n.name + 
+            '</p> \n \n </div>\n <div class="row" style="height: 15px;">&nbsp;</div>\n' + 
+            '<div class="row dialog__content">\n <div class="col-lg-6 col-sm-6 image">\n' + 
+            '<img src="' + (n.img||"img/portfolio/fullsize/7.jpg") + 
+            '">\n</img>\n </div>\n <div class="col-lg-6 col-sm-6">\n' + 
+            '<div id="rate"> Ratings: ' + 
+            make_ratings(n.rate) + "(" + n.rate +'/5)</div>\n' + 
+            '<div data-address id="address"><i class="fa fa-map-marker"></i>' + n.address + 
+            "</div>\n <div data-link><a class=link href='https://www.google.ca/maps/place/" + 
+            n.name.split(" ").join("+") + '\'><i class=\'fa fa-link\'></i>Link</a> </div>'+ 
+            '</div>\n </div>\n <div class="row" style="height: 15px;">&nbsp;</div>\n \n' + 
+            '<div class="row comments">\n <div class="col-lg-12 col-sm-12">\n' + 
+            '<div class="comment-form">\n \x3c!-- Comment Avatar --\x3e\n' + 
+            '<div class="comment-avatar">\n' + '<img src="img/portfolio/fullsize/8.jpg">\n' + 
+            '</div>\n \n <div class="form" name="form" novalidate>\n' + 
+            '<div class="form-row">\n <textarea\n class="input"\n' + 
+            'id="comment_text"\n placeholder="Want to leave a comment?"\n' + 
+            'required></textarea>\n </div>\n <div class="form-row">' + 
+            '\n <button id="comment_submit">Add Comment</button>\n' + 
+            '</div>\n </div>\n </div>\n \n </div>\n </div>\n \n \n' + 
+            '<div class="row">\n <div class=\'comments col-lg-12 col-sm-12\'' + 
+            'id=\'comment_list\'>\n\n </div>\n' + '</div>\n </div>\n\n \n </div>\n \n </div>\n'
+      }
+
+      $(document).on(
+        "click","#comment_submit", function(){
+          if ($("#comment_text").val() == ''){
+            $('#comment_text').attr('placeholder', 'Oops, empty comment!');
+          } else {
+            var n=$("#comment_text").val();
+            $("#comment_text").val("");
+            create_comment(n);
+            var name = $('#title').text();
+            var address = $('#address').text();
+            $.ajax({
+              type: "POST",
+              url: "/comment",
+              data: {name, address, n},
+              success: function(data){}
+            });
+          }
+      });
+
+      function create_comment(n){
+        var a=$("<div></div>").text(n).html();
+        //var s=$("#comment_email").val()||"Anonymous";
+        var t='<div class="comment">\n' + 
+          '\x3c!-- Comment Avatar --\x3e\n' + 
+          '<div class="comment-avatar">\n' + 
+          '<img src="img/portfolio/fullsize/8.jpg">\n' + 
+          '</div>\n\n \x3c!-- Comment Box --\x3e\n' + 
+          '<div class="comment-box">\n' + 
+          '<div class="comment-text">' + a + 
+          '</div>\n </div>';
+        $("#comment_list").prepend(t);
+      }
+
+      $('body').click(function(event) {
+        var flag = event.target.id.toString().includes('title') || event.target.id.toString().includes('link');
+        if(flag){
+          var index = event.target.id.toString().substring(event.target.id.toString().length-1,event.target.id.toString().length);
+          var path = '#link' + index;
+          var name = $(path).text();
+          $.ajax({
+            type: "POST",
+            url: "/check",
+            data: {name},
+            success: function(comments){
+              if (comments != 'null'){
+                for (i = 0; i < comments.length; i++){
+                  create_comment(comments[i]);
+                }
+              } 
+          }});
+        }
+      });
+
+    </script>

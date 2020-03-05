@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>True North Travel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+  </head>
+
+  <body id="page-top">
+
+  <!--This div is the front entry view-->  
+  <div id="needtorm" class="myVideo">
+    <!--Below is the video in the enty page-->
+    <video autoplay loop muted id="video">
+      <source src="bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p id="final">CLICK TO ENTER</p>
+  </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+  // below is the code for front video cover
+  if (document.getElementById("needtorm") != null){ 
+    var disclick = false;
+    var frontvideo = document.getElementById("needtorm");
+    frontvideo.addEventListener("click", removeclass);
+
+    setTimeout(function(){
+      disclick = true;
+      document.getElementById("needtorm").style.cursor = "pointer";
+    }, 7000);
+
+    function removeclass() {
+      if (disclick) {
+        //this.style.display = "none";
+        //document.getElementById("final").style.opacity = 1;
+        window.scrollTo(0,0);
+        window.location.href = "/main";
+      }
+    }
+
+    if (document.getElementById("needtorm") != null){
+      setTimeout(function(){
+        document.getElementById("final").style.opacity = 1;
+      }, 6800);
+    }
+  }
+</script>
