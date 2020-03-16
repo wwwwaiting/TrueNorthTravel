@@ -3,7 +3,6 @@
 Collaborate with Cami Guo and Zeping Qu  
 
 Deployed website: https://thetruenorth.herokuapp.com  
-**Need to be maintained to use**
 
 #### Main Goal
 Provide help when people have trouble planning a trip in Canada.
