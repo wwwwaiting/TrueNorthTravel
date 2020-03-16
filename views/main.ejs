@@ -46,7 +46,7 @@
     </script>
     
     <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxrP-Z_Bze_qa9uvAxDu0el5gRSnH71Kw&libraries=places&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6bubFCFqHfr1C7m70H8ByKALeAcv0lWo&libraries=places&callback=initMap" async defer></script>
 
     </div>
 
@@ -686,7 +686,7 @@
       
     }
     // if the result is ok, display the results.
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results != undefined) {
 
       // arrange the results with decresing order in rating
       for(var i=0; i < results.length ;i++){
@@ -709,6 +709,10 @@
       var flag = false;
       while (cur < results.length){
         var type_list = results[cur].types;
+        if (type_list == undefined || results[cur].formatted_address == undefined || results[cur].name == undefined) {
+          results.splice(cur, 1);
+          continue;
+        }
         for (var j = 0; j< type_list.length; j++){
           if(wanted_type.indexOf(type_list[j]) == -1){
             flag = true;
